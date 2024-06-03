@@ -1,0 +1,49 @@
+{
+  "name": "@flair-sdk/common",
+  "version": "2.82.3",
+  "private": false,
+  "author": "flair.dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flair-sdk/typescript.git"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js",
+      "default": "./src/index.js",
+      "types": "./dist/types.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "dist/index.es.js",
+  "types": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "@wagmi/core": "*",
+    "ethers": "*"
+  },
+  "peerDependenciesMeta": {
+    "@wagmi/core": {
+      "optional": true
+    },
+    "ethers": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@wagmi/core": "^0.8.2",
+    "ethers": ">=5.5.1"
+  }
+}
